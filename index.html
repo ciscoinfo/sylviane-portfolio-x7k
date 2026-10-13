@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Sylviane — Directrice des Réclamations & Négociations Tarifaires</title>
+  <meta name="description" content="Portfolio officiel de Sylviane. Ne lâche jamais rien." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23e2452f'/><text x='50' y='72' font-size='64' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>S</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="is-gated">
+
+  <!-- ===== PORTE D'ENTRÉE : SCRABBLE ===== -->
+  <div id="gate" class="gate" role="dialog" aria-label="Entrée du site">
+    <div class="gate__inner">
+      <p class="eyebrow">Accès réservé</p>
+      <h1 class="gate__title">Pour entrer, faites un <em>mot</em>.</h1>
+      <p class="gate__sub">Sylviane ne laisse entrer personne sans un minimum de vocabulaire.</p>
+      <div id="scrabble"></div>
+      <p class="gate__help">Tous les mots valides sont acceptés, pas seulement le plus long. Le bouton « Demander à Sylviane » donne un indice.</p>
+    </div>
+    <button class="skip skip--gate" id="skip-gate" type="button">Passer l’épreuve →</button>
+  </div>
+
+  <!-- ===== SITE ===== -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__logo">Sylviane<sup>®</sup></a>
+    <nav class="nav__links">
+      <a href="#profil">Profil</a>
+      <a href="#competences">Compétences</a>
+      <a href="#experiences">Expériences</a>
+      <a href="#projets">Projets</a>
+      <a href="#avis">Avis</a>
+      <a href="#salle-de-jeux">Jeux</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="sound" class="sound" aria-pressed="false" title="Activer / couper le son">
+      <span class="sound__icon">🔇</span><span class="sound__label">Son</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Portfolio officiel · Édition collector</p>
+        <h2 class="hero__name" data-split>Sylviane</h2>
+        <p class="hero__role">Directrice des Réclamations <br />& Négociations Tarifaires</p>
+        <p class="hero__lead">Ne lâche rien. Ni un ticket de caisse, ni un cafard, ni un point de Scrabble.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contact">Déposer une réclamation</a>
+          <a class="btn" href="#projets">Voir mes réalisations</a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <div class="photo">
+          <img src="/photo-sylviane.jpg" alt="Sylviane" onerror="this.remove()" />
+          <span class="photo__fallback">S</span>
+        </div>
+        <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+          <circle cx="100" cy="100" r="98" class="badge__bg" />
+          <text class="badge__text"><textPath href="#circ" textLength="480" lengthAdjust="spacing">Satisfaite ou remboursée ✦ Réclamée ✦ </textPath></text>
+          <text x="100" y="116" text-anchor="middle" class="badge__star">★</text>
+        </svg>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Réclamation ✦ Scrabble ✦ Promotion ✦ Yiddish ✦ Carmen ✦ Courrier recommandé ✦ Café ✦ Chocolat ✦ Séries TV ✦ Sieste ✦ La Traviata ✦ Cafards : zéro tolérance ✦ Prix au kilo ✦ Piments du balcon ✦ </span>
+        <span>Réclamation ✦ Scrabble ✦ Promotion ✦ Yiddish ✦ Carmen ✦ Courrier recommandé ✦ Café ✦ Chocolat ✦ Séries TV ✦ Sieste ✦ La Traviata ✦ Cafards : zéro tolérance ✦ Prix au kilo ✦ </span>
+      </div>
+    </div>
+
+    <!-- CHIFFRES -->
+    <section class="stats reveal">
+      <div class="stat"><b data-count="100">0</b><span>% de réclamations abouties<br /><small>(les autres sont en cours)</small></span></div>
+      <div class="stat"><b>∞</b><span>Lettres recommandées envoyées</span></div>
+      <div class="stat"><b data-count="12">0</b><span>% des mots de Scrabble joués réellement compris</span></div>
+      <div class="stat"><b>0,99&nbsp;€</b><span>Prix maximum toléré pour un concombre</span></div>
+      <div class="stat"><b>7/7</b><span>jours où le café et le carré de chocolat précèdent la sieste</span></div>
+      <div class="stat"><b>∞</b><span>épisodes de séries TV regardés<br /><small>(dont 12 % jusqu’au bout)</small></span></div>
+    </section>
+
+    <!-- PROFIL -->
+    <section id="profil" class="section reveal">
+      <p class="eyebrow">01 — Profil</p>
+      <h2 class="h2">Un parcours <em>hors norme</em>, une rigueur sans faille.</h2>
+      <div class="profil">
+      <div class="two-col">
+        <p class="lead">Professionnelle reconnue de la contestation constructive, Sylviane met au service de ses interlocuteurs plus de trente ans d’une exigence que certains qualifient de « fatigante » et qu’elle préfère nommer <em>« le bon sens »</em>.</p>
+        <p>Dotée d’un sens aigu de l’équité et d’un œil infaillible pour repérer un prix mal affiché, elle défend ses droits, ceux de son immeuble, et accessoirement ceux de son caddie. Mélomane, scrabbleuse et yiddishophone en formation continue, elle prouve chaque jour qu’on peut tout concilier : le Lidl du coin et Bizet.</p>
+      </div>
+      <figure class="polaroid">
+        <img src="/photo-sylviane-main.jpg" alt="Sylviane, la main levée" onerror="this.closest('figure').remove()" />
+        <figcaption>Sylviane présentant ses résultats trimestriels</figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES (verrouillée : jeu des courses) -->
+    <section id="competences" class="section lockable" data-game="courses">
+      <div class="section__content reveal">
+        <p class="eyebrow">02 — Compétences</p>
+        <h2 class="h2">Savoir-faire & <em>savoir-se-plaindre</em></h2>
+        <ul class="skills">
+          <li><span>Chasse aux promotions</span><div class="bar" data-v="100"><i></i></div><em>100 %</em></li>
+          <li><span>Rédaction de lettres de réclamation</span><div class="bar" data-v="100"><i></i></div><em>100 % <small>(+10 % de colère)</small></em></li>
+          <li><span>Négociation avec un bailleur <small>(très difficile)</small></span><div class="bar" data-v="31"><i></i></div><em>31 %</em></li>
+          <li><span>Justesse en soprano</span><div class="bar" data-v="95"><i></i></div><em>95 %</em></li>
+          <li><span>Yiddish <small>(cours en cours)</small></span><div class="bar" data-v="78"><i></i></div><em>78 %</em></li>
+          <li><span>Compréhension des mots qu’elle joue au Scrabble</span><div class="bar" data-v="12"><i></i></div><em>12 %</em></li>
+          <li><span>Intelligence artificielle <small>(dialogue avec ChatGPT)</small></span><div class="bar" data-v="70"><i></i></div><em>70 %</em></li>
+          <li><span>Séries TV vues <small>(aucune ne lui échappe)</small></span><div class="bar" data-v="100"><i></i></div><em>100 %</em></li>
+          <li><span>Poulet du dimanche <small>(parfois le vendredi, à horaire variable)</small></span><div class="bar" data-v="100"><i></i></div><em>100 %</em></li>
+          <li><span>Tolérance au concombre à 2,10 €</span><div class="bar bar--zero" data-v="0"><i></i></div><em>0 %</em></li>
+        </ul>
+      </div>
+      <div class="lock" hidden>
+        <div class="lock__card">
+          <span class="lock__icon">🔒</span>
+          <h3>Section protégée</h3>
+          <p>Pour consulter les compétences de Sylviane, il faut d’abord prouver qu’on sait faire ses courses.</p>
+          <button class="btn btn--primary" data-open-game="courses">Aller au Lidl du coin</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPÉRIENCES (verrouillées : jeu HLM) -->
+    <section id="experiences" class="section lockable" data-game="hlm">
+      <div class="section__content reveal">
+        <p class="eyebrow">03 — Expériences</p>
+      <h2 class="h2">Parcours <em>professionnel</em></h2>
+      <ol class="timeline">
+        <li>
+          <span class="timeline__date">Depuis toujours</span>
+          <h3>Responsable de la lutte anti-cafards</h3>
+          <p>Gestion d’une population nuisible en milieu HLM. Approche en trois temps : constat, courrier recommandé, mise en demeure. Résultats mitigés, mais le bailleur a changé de numéro.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Chaque semaine</span>
+          <h3>Négociatrice officielle du rayon fruits & légumes</h3>
+          <p>Veille tarifaire permanente. A déjà fait reposer un concombre à 2,10 € avec un regard que les caissiers évoquent encore.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Depuis des décennies</span>
+          <h3>Médiatrice (non mandatée) entre locataires et bailleur</h3>
+          <p>Représente l’immeuble avec ou sans son accord. Réclamations, relances, relances de relances. Délai de réponse du bailleur : <em>en cours</em>.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Le week-end</span>
+          <h3>Joueuse de Scrabble, niveau « mot inconnu mais valide »</h3>
+          <p>Place WU, XU, KA et autres mots que personne n’a jamais entendus en dehors d’un plateau. Ne s’explique pas, ne se justifie pas, marque les points.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Tous les jours, entre midi et 15 h</span>
+          <h3>Cheffe d’orchestre domestique</h3>
+          <p>Gère en même temps le poulet, le micro-ondes, le Scrabble, les appels de ses enfants et la vaisselle. N’a jamais raté un tour de Scrabble, sauf quand le micro-ondes sonnait.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Depuis quelques années</span>
+          <h3>Pionnière des nouvelles technologies</h3>
+          <p>Téléphone, ordinateur, intelligences artificielles : elle s’y met avec un courage admirable et une ténacité que le support technique familial salue. A déjà demandé à ChatGPT de rédiger une réclamation, puis de la corriger, puis de s’excuser.</p>
+        </li>
+        <li>
+          <span class="timeline__date">De mai à octobre</span>
+          <h3>Cheffe jardinière du balcon (spécialité : piments)</h3>
+          <p>Quelques mètres carrés, une rambarde, des pots à n’en plus finir. Arrosage au lever du jour, conversations avec les piments, surveillance rapprochée de la menthe, du basilic et du muguet du 1<sup>er</sup> mai.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Tous les jours, avant la sieste</span>
+          <h3>Responsable du rituel café &amp; carré de chocolat</h3>
+          <p>Un seul carré. Enfin, un seul à la fois. Procédure rigoureuse : le café d’abord, le chocolat ensuite, la sieste immédiatement après. Jamais d’exception, sauf pour un deuxième carré.</p>
+        </li>
+        <li>
+          <span class="timeline__date">Chaque après-midi, vers 15 h</span>
+          <h3>Spectatrice de référence des séries TV (depuis son lit)</h3>
+          <p>Reconnue par la profession pour avoir tout vu : aucune série ne lui échappe. Elle a suivi les quinze saisons de « Grey’s Gastronomie », deux fois : une fois éveillée, une fois pendant la sieste.</p>
+        </li>
+      </ol>
+      </div>
+      <div class="lock" hidden>
+        <div class="lock__card">
+          <span class="lock__icon">🪳</span>
+          <h3>Cuisine infestée</h3>
+          <p>Le CV de Sylviane est resté coincé derrière les cafards. Débarrassez la cuisine pour y accéder.</p>
+          <button class="btn btn--primary" data-open-game="hlm">Lancer la chasse aux nuisibles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section reveal">
+      <p class="eyebrow">04 — Projets</p>
+      <h2 class="h2">Réalisations <em>majeures</em></h2>
+      <div class="cards">
+        <article class="card card--scrabble">
+          <h3>Le Scrabble</h3>
+          <p>Un art, une passion, un lexique secret. Mots courts, gros scores, définitions inconnues.</p>
+          <div class="tiles">
+            <span class="tile" data-pts="10">W</span><span class="tile" data-pts="1">U</span>
+            <span class="tile-gap"></span>
+            <span class="tile" data-pts="10">X</span><span class="tile" data-pts="1">U</span>
+            <span class="tile-gap"></span>
+            <span class="tile" data-pts="10">K</span><span class="tile" data-pts="1">A</span>
+            <span class="tile-gap"></span>
+            <span class="tile" data-pts="8">Q</span><span class="tile" data-pts="1">I</span>
+          </div>
+          <p class="card__note">Définitions : aucune idée. Points : tous.</p>
+        </article>
+
+        <article class="card card--yiddish">
+          <h3>Le Yiddish</h3>
+          <p class="yid">שלאָף, מיַין קינד</p>
+          <p><em>Shlof, mayn kind</em> — « Dors, mon enfant ». Cours hebdomadaires, niveau avancé, accent impeccable. Dit-elle.</p>
+          <p class="card__note">Mot du jour : <b>chutzpah</b> — voir : tout ce qu’il faut pour réclamer un remboursement sans ticket de caisse.</p>
+        </article>
+
+        <article class="card card--balcon">
+          <h3>Le Balcon</h3>
+          <p>Un potager de poche : piments, menthe, basilic, ciboulette et muguet pour le 1<sup>er</sup> mai. Les fraises et les myrtilles ? Pas encore, mais elle y réfléchit sérieusement.</p>
+          <p class="card__note">Les piments poussent mieux quand on leur parle. À retrouver en jeu, dans la salle de jeux.</p>
+        </article>
+
+        <article class="card card--chorale">
+          <h3>La Chorale</h3>
+          <p>Répertoire classique, ambition lyrique. Habanera de <em>Carmen</em> sous la douche, <em>Libiamo</em> de <em>La Traviata</em> dans la cage d’escalier.</p>
+          <p class="card__note">Dirige aussi <b>« La Chorale des cafards »</b> : quatre voix, une Habanera, zéro justesse. Voir les avis.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- AVIS (verrouillé : Chorale des cafards) -->
+    <section id="avis" class="section lockable" data-game="chorale">
+      <div class="section__content reveal">
+        <p class="eyebrow">05 — Avis clients</p>
+      <h2 class="h2">Ils en parlent <em>(souvent à contrecœur)</em></h2>
+      <div class="quotes">
+        <blockquote><p>« Depuis son courrier, je n’ose plus revenir. »</p><cite>— Un cafard, anonyme</cite></blockquote>
+        <blockquote><p>« Merci de ne plus m’écrire. Merci de ne plus m’écrire. Merci. »</p><cite>— Le bailleur, 47<sup>e</sup> relance</cite></blockquote>
+        <blockquote><p>« Je regrette tout. J’aurais dû être à 0,89 €. »</p><cite>— Un concombre à 2,10 €</cite></blockquote>
+        <blockquote><p>« Elle sait ce qu’elle veut. Et ce qu’elle ne veut pas payer. »</p><cite>— Le caissier du Lidl du coin</cite></blockquote>
+        <blockquote><p>« Elle me garde toujours pour la fin. Je suis très flatté, et un peu croqué. »</p><cite>— Un carré de chocolat</cite></blockquote>
+        <blockquote><p>« Elle m’a demandé si j’étais bien branché. J’ai répondu oui. Elle a vérifié. »</p><cite>— Un assistant IA</cite></blockquote>
+      </div>
+      </div>
+      <div class="lock" hidden>
+        <div class="lock__card">
+          <span class="lock__icon">🪳</span>
+          <h3>Témoins muets</h3>
+          <p>Les cafards ne témoignent que s’ils chantent juste. Dirigez la chorale pour les faire parler.</p>
+          <button class="btn btn--primary" data-open-game="chorale">Diriger la chorale des cafards</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (verrouillé : examen de yiddish) -->
+    <section id="contact" class="section lockable" data-game="yiddish">
+      <div class="section__content reveal">
+        <p class="eyebrow">06 — Contact</p>
+      <h2 class="h2">Une <em>réclamation</em> ? Parlons-en.</h2>
+      <form id="claim" class="form" autocomplete="off">
+        <label>Objet de la réclamation
+          <select required>
+            <option value="">— Choisir —</option>
+            <option>Prix excessif d’un légume</option>
+            <option>Cafard(s) dans le hall</option>
+            <option>Bailleur injoignable</option>
+            <option>Mot de Scrabble contesté</option>
+            <option>Soprano trop fort à la chorale</option>
+            <option>Autre (Sylviane aura son mot à dire)</option>
+          </select>
+        </label>
+        <label>Votre message
+          <textarea rows="4" placeholder="Soyez précis. Joignez une photo et le ticket de caisse." required></textarea>
+        </label>
+        <button class="btn btn--primary" type="submit">Envoyer en recommandé avec accusé de réception</button>
+        <p class="form__result" role="status" hidden></p>
+      </form>
+      </div>
+      <div class="lock" hidden>
+        <div class="lock__card">
+          <span class="lock__icon">📜</span>
+          <h3>Examen d’entrée</h3>
+          <p>Pour déposer une réclamation auprès de Sylviane, il faut d’abord réussir un petit examen de yiddish. Ça filtre.</p>
+          <button class="btn btn--primary" data-open-game="yiddish">Passer l’examen</button>
+        </div>
+      </div>
+    </section>
+  
+    <!-- SALLE DE JEUX -->
+    <section id="salle-de-jeux" class="section">
+      <div class="reveal">
+        <p class="eyebrow">07 — Salle de jeux</p>
+        <h2 class="h2">Les épreuves de <em>Sylviane</em></h2>
+        <p class="lead arcade__lead">Les jeux des sections se rejouent ici dès qu’ils sont débloqués. Les jeux bonus, eux, sont ouverts à tout le monde.</p>
+        <div id="arcade" class="arcade"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Sylviane — Tous droits réservés, y compris celui de se plaindre.</p>
+    <p class="footer__love">Fait avec amour, et sans aucune réclamation.</p>
+    <p class="footer__credit">Musique : Prélude de <em>Carmen</em> (Bizet), notes issues de l’édition du <a href="https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=635" target="_blank" rel="noopener">Mutopia Project</a>, licence CC BY-SA 2.5.</p>
+  </footer>
+
+  <!-- LECTEUR : titre en cours + piste suivante -->
+  <div id="player" class="player" hidden>
+    <span id="nowplaying" aria-live="polite"></span>
+    <button id="next-track" title="Piste suivante" aria-label="Piste suivante">⏭</button>
+  </div>
+
+  <!-- MODALE DE JEU -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal__box">
+      <div class="modal__bar"><button class="modal__close" aria-label="Fermer">×</button></div>
+      <div id="modal-content"></div>
+      <button class="skip" id="skip-game" type="button">Passer ce jeu →</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
